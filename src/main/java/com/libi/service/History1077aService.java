@@ -2,6 +2,7 @@ package com.libi.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.libi.entity.History1077aDo;
+import org.apache.ibatis.cursor.Cursor;
 
 import java.util.Map;
 
@@ -12,5 +13,6 @@ import java.util.Map;
  * @date 2022-05-28 14:13:46
  */
 public interface History1077aService extends IService<History1077aDo> {
+    Cursor<History1077aDo> cursor();
 }
 

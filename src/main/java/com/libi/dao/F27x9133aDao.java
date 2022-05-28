@@ -3,6 +3,8 @@ package com.libi.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.libi.entity.F27x9133aDo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.cursor.Cursor;
 
 /**
  *
@@ -13,4 +15,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface F27x9133aDao extends BaseMapper<F27x9133aDo> {
 
+    @Select("select * from F27X9_133a")
+    Cursor<F27x9133aDo> selectAll();
 }
